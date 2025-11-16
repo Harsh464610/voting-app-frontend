@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import AuthRoutes from "./pages/auth"; // top-level auth router page (we will create)
 // import Election from "./pages/Election";
 import NavBar from "./components/NavBar";
+import Contact from "./components/Contact";
+import About from "./components/About";
 import ResetPassword from "./pages/auth/ResetPassword";
 import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
@@ -18,6 +20,8 @@ export default function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="/auth/*" element={<AuthRoutes />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />

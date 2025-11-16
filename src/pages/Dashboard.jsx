@@ -205,6 +205,7 @@ export default function Dashboard() {
 
   const profileUrl = getImageUrl(authUser?.profilePicture || authUser?.profilePictureUrl || authUser?.profile_picture);
   const symbolUrl = getImageUrl(authUser?.symbol || authUser?.symbolUrl || authUser?.symbol_url);
+  localStorage.setItem("profileUrl", profileUrl || "");
 
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-8 bg-gray-900 text-gray-100 min-h-screen">
